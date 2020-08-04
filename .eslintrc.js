@@ -34,5 +34,6 @@ module.exports = {
     '@typescript-eslint/array-type': [2, { default: 'array-simple' }],
     '@typescript-eslint/no-var-requires': [0],
     '@typescript-eslint/no-unused-vars': [0],
+    '@typescript-eslint/explicit-module-boundary-types': [0],
   },
 };

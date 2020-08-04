@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 export default function Component<P = any, S = any>(
-  componentConfig: { [key]: string },
-  render: () => void
-): React.ComponentType<P, S> {
+  componentConfig: { [key: string]: any },
+  render: () => React.ReactNode
+): React.ComponentType<P> {
   return class Component extends React.Component<P, S> {
     constructor(props: any) {
       super(props);

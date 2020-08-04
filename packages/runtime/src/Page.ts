@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export default function Page(
   pageConfig: { [key: string]: any },
-  render: () => void
+  render: () => React.ReactNode
 ): React.ComponentType {
   return class Page extends React.Component {
     constructor(props: any) {

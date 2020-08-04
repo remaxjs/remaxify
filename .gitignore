@@ -1,5 +1,8 @@
 node_modules
 yarn-error.log
+
 lib
+esm
+cjs
 
 .vscode

@@ -22,7 +22,7 @@
     "install:codesandbox": "PUPPETEER_SKIP_DOWNLOAD=1 yarn install"
   },
   "repository": "git@github.com:remaxjs/remaxify.git",
-  "author": "s",
+  "author": "Caihuanyu <eterlf41@gmail.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {

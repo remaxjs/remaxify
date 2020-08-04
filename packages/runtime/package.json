@@ -6,10 +6,15 @@
   "author": "Caihuanyu <eterlf41@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "clean": "rimraf cjs esm tsconfig.tsbuildinfo",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir cjs"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^16.0.0",
+    "remax": "^2.6.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.8",

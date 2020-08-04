@@ -6,11 +6,18 @@ import readdir from 'fs-readdir-recursive';
 import diff from 'jest-diff';
 import { sortBy } from 'lodash';
 import eol from 'eol';
+import { slash } from '@remax/shared';
 
 type Received = Array<{ filename: string; content: string }>;
 
 function buildText(files: Received) {
-  return sortBy(files, ['filename'])
+  return sortBy(
+    files.map(f => ({
+      ...f,
+      filename: slash(f.filename),
+    })),
+    ['filename']
+  )
     .reduce((acc: string[], f) => {
       acc.push(
         `file: ${f.filename}`,

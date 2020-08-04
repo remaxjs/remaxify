@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component works 1`] = `
+<view
+  onTap={[Function]}
+>
+  A
+  B
+</view>
+`;
+
+exports[`Component works 2`] = `
+<view
+  onTap={[Function]}
+>
+  AA
+  B
+</view>
+`;

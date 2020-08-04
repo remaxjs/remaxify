@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-export default function Page(pageConfig: any, render: Function) {
+export default function Page(
+  pageConfig: { [key: string]: any },
+  render: () => void
+): React.ComponentType {
   return class Page extends React.Component {
     constructor(props: any) {
       super(props);

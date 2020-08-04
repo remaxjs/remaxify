@@ -1,14 +1,13 @@
 import * as React from 'react';
 import TestRenderer from 'react-test-renderer';
-import Page from '../Page';
+import Component from '../Component';
 
-describe('Page', () => {
+describe('Component', () => {
   it('works', () => {
     const mockShow = jest.fn();
     const config: any = {
       data: {
         propA: 'A',
-        propB: 'B',
       },
 
       onShow(...params: any) {
@@ -18,7 +17,6 @@ describe('Page', () => {
       onTap() {
         this.setData({
           propA: 'AA',
-          propB: 'BB',
         });
       },
     };
@@ -30,13 +28,13 @@ describe('Page', () => {
       return (
         <View onTap={this.onTap}>
           {this.state.propA}
-          {this.state.propB}
+          {this.props.propB}
         </View>
       );
     }
-    const PageComponent = Page(config, render);
+    const CompComponent = Component(config, render);
 
-    const testRenderer = TestRenderer.create(<PageComponent />);
+    const testRenderer = TestRenderer.create(<CompComponent propB="B" />);
     expect(testRenderer.toJSON()).toMatchSnapshot();
 
     testRenderer.root.findByType('view').props.onTap();

@@ -1,0 +1,4 @@
+{
+  "installCommand": "install:codesandbox",
+  "packages": ["packages/cli", "packages/runtime"]
+}

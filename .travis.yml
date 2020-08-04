@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - stable
+script:
+  - yarn lint
+  - yarn build
+  - yarn test:cov
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

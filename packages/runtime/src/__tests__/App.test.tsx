@@ -9,6 +9,9 @@ describe('App', () => {
       onShow(...params: any) {
         mockShow(...params);
       },
+      globalData: {
+        data: 'data',
+      },
     };
 
     const AppComponent = App(config);
@@ -23,5 +26,6 @@ describe('App', () => {
     const options = { optionA: 'A' };
     testRenderer.root.instance.onShow(options);
     expect(mockShow).toBeCalledWith(options);
+    expect(testRenderer.root.instance.globalData.data).toBe('data');
   });
 });

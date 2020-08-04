@@ -1,0 +1,3 @@
+exports.wechat = {
+  component: true,
+};

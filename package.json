@@ -1,0 +1,18 @@
+{
+  "name": "remaxify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "lerna bootstrap"
+  },
+  "repository": "git@github.com:remaxjs/remaxify.git",
+  "author": "s",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lerna": "^3.22.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

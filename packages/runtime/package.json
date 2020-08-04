@@ -1,0 +1,24 @@
+{
+  "name": "@remax/remaxify-runtime",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:remaxjs/remaxify.git",
+  "author": "Caihuanyu <eterlf41@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.8",
+    "@types/react": "^16.9.44",
+    "@types/react-test-renderer": "^16.9.3",
+    "jest": "^26.2.2",
+    "react": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "remax": "^2.7.7",
+    "ts-jest": "^26.1.4"
+  }
+}

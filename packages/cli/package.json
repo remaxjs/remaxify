@@ -1,0 +1,36 @@
+{
+  "name": "@remax/remaxify-cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:remaxjs/remaxify.git",
+  "author": "Caihuanyu <eterlf41@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.10.5",
+    "@types/babel__traverse": "^7.0.13",
+    "@types/glob": "^7.1.3",
+    "@types/jest": "^26.0.7",
+    "@types/lodash": "^4.14.158",
+    "eol": "^0.9.1",
+    "fs-readdir-recursive": "^1.1.0",
+    "jest": "^26.1.0",
+    "jest-diff": "^26.1.0",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.10.5",
+    "@babel/helper-module-imports": "^7.10.4",
+    "@babel/parser": "^7.10.5",
+    "@babel/traverse": "^7.10.5",
+    "glob": "^7.1.6",
+    "lodash": "^4.17.19",
+    "prettier": "^2.0.5",
+    "remax": "^2.7.7",
+    "sander": "^0.6.0"
+  }
+}

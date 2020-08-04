@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import glob from 'glob';
+import { slash } from '@remax/shared';
 import parse from './sourceType';
 import createGenerator, { Generator } from './generators';
 import { initial as initialOptions, options, Options } from './options';
@@ -15,7 +16,7 @@ function generateFiles(generator: Generator, files: string[]) {
   return files.map(file => {
     const code = fs.readFileSync(file).toString();
     const [sourceType, ast] = parse(file, code);
-    const filename = file.replace(path.resolve(options.cwd) + '/', '');
+    const filename = file.replace(slash(path.resolve(options.cwd) + '/'), '');
 
     return generator.create(sourceType, filename, { code, ast });
   });
